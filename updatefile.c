@@ -13,14 +13,17 @@ int main()
     printf("enter the id to update");
     scanf("%d",&id);
     while(fread(&obj1[i],sizeof(obj1),1,fp)==1)
-    {
-        if(obj1[i].empid==id)
-        {    
-            printf("enter new data");
-            scanf("%d %s",&obj1[i].empid,&obj1[i].empname);
-           fseek(fp,sizeof(obj1[i])*i,SEEK_SET);
-           fread(&obj1[i],sizeof(obj1),1,fp);
-         }
+    { 
+        for(i=0;i<2;i++)
+        {
+             if(obj1[i].empid==id)
+               {    
+                   printf("enter new data");
+                   scanf("%d %s",&obj1[i].empid,&obj1[i].empname);
+                   fseek(fp,sizeof(obj1[i])*i,SEEK_SET);
+                   fread(&obj1[i],sizeof(obj1),1,fp);
+               }
+        }   
     }
 }
 
