@@ -12,7 +12,7 @@ int main()
     fp=fopen("employeedb","r+b");
     printf("enter the id to update");
     scanf("%d",&id);
-    while(fread(&obj1[i],sizeof(obj1),1,fp)==1)
+    while((fread(&obj1[i],sizeof(obj1),1,fp)==1))
     { 
         for(i=0;i<2;i++)
         {
