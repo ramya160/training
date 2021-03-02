@@ -10,11 +10,11 @@ struct employee obj2[10];
 int main()
 {   int i;
     FILE *fp;
-    fp=fopen("employeedb","rb");
+    fp=fopen("employeedb","r");
     fread(&obj2[i],sizeof(obj2),1,fp);
     for(i=0;i<2;i++)
     {
-        printf("%d %s",obj1[i].empid,obj1[i].empname);
+        printf("%d %s",obj2[i].empid,obj2[i].empname);
     }
     printf("read successfully");
 }
