@@ -8,11 +8,11 @@ int main()
 
 {
 
-int pid;
+int pid=0;
 int fds[2];
 int fds1[2];
-int data;
-int data1;
+char data[10];
+char data1[10];
  if(pipe(fds)<0)
       {
    printf("pipe error");
