@@ -11,7 +11,10 @@ int main()
 {   int i;
     FILE *fp;
     fp=fopen("employeedb","rb");
+    for(i=0;i<2;i++)
+    {
     fread(&obj2[i],sizeof(obj2),1,fp);
+    }
     for(i=0;i<2;i++)
     {
         printf("%d %s",obj2[i].empid,obj2[i].empname);
