@@ -10,11 +10,11 @@ int main()
 {   int i;
     FILE *fp;
     fp=fopen("employeedb","wb");
-    for(i=0;i<=2;i++)
+    for(i=;i<3;i++)
     {
         scanf("%d %s",&obj1[i].empid,&obj1[i].empname);
     }
-    for(i=0;i<=2;i++)
+    for(i=1;i<3;i++)
     {
     fwrite(&obj1[i],sizeof(obj1),1,fp);
     }
