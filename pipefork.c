@@ -31,15 +31,17 @@ if(pid == 0)
 {
 
   sleep(5);
-  read(&fds[0],data,5);
-  write(&fds1[1],"hai",5);
+  read(fds[0],data,5);
+  printf("%d",data);
+  write(fds1[1],"hai",5);
 }
 
 if(pid>0)
 {
-      write(&fds[1],"hello",5);
+       write(&fds[1],"hello",5);
        sleep(5);
        read(&fds1[0],data1,5);
+       printf("%d",data1);
 }
 
 }
