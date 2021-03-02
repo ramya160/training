@@ -38,9 +38,9 @@ if(pid == 0)
 
 if(pid>0)
 {
-       write(&fds[1],"hello",5);
+       write(fds[1],"hello",5);
        sleep(5);
-       read(&fds1[0],data1,5);
+       read(fds1[0],data1,5);
        printf("%d",data1);
 }
 
