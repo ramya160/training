@@ -9,7 +9,7 @@ struct employee
 int main()
 {   int i;int id;
     FILE *fp;
-    fp=fopen("employeedb","wb");
+    fp=fopen("employeedb","r+b");
     printf("enter the id to update");
     scanf("%d",&id);
     while(fread(&obj1[i],sizeof(obj1),1,fp)==1)
