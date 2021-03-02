@@ -10,7 +10,7 @@ int main()
 {   int i;
     FILE *fp;
     fp=fopen("employeedb","wb");
-    for(i=1;i<=3;i++)
+    for(i=1;i<3;i++)
     {
         scanf("%d %s",&obj1[i].empid,&obj1[i].empname);
     }
