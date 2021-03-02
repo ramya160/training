@@ -14,6 +14,9 @@ int main()
     {
         scanf("%d %s",&obj1[i].empid,&obj1[i].empname);
     }
+    for(i=0;i<2;i++)
+    {
     fwrite(&obj1[i],sizeof(obj1),1,fp);
+    }
     printf("written successfully");
 }
